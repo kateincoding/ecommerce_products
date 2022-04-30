@@ -32,7 +32,7 @@ class DBStorage:
         pssw = getenv('DB_PASSWORD')
         host = getenv('DB_HOST')
         db = getenv('DB_DATABASE')
-        sql = 'mysql+mysqlconnector://{}:{}@{}/{}'.format(user, pssw, host, db)
+        sql = 'mysql+mysqldb://{}:{}@{}/{}'.format(user, pssw, host, db)
         self.__engine = create_engine(sql, pool_pre_ping=True)
 
     def all(self, cls=None):
@@ -65,6 +65,7 @@ class DBStorage:
         """call remove() method on the private session"""
         self.__session.remove()
 
+
     def get(self, cls, id):
         """
         Returns the object based on the class name and
@@ -74,9 +75,10 @@ class DBStorage:
             return None
         all_cls = models.storage.all(cls)
         for value in all_cls.values():
-            if (value.id == id):
+            if (str(value.id) == str(id)):
                 return value
         return None
+
 
     def count(self, cls=None):
         """
