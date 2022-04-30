@@ -3,7 +3,7 @@ const HOST = '0.0.0.0';
 const checksCategories = {};
 
 function main () {
-  /* readCategories(); */
+  readCategories();
   console.log("estoy aqui")
   dataUsers();
   /* $(':button').click(function () {
@@ -25,5 +25,17 @@ function dataUsers () {
       </div>
       </article>`);
     }
+  });
+}
+
+function readCategories () {
+  $('.categories .popover').change(function () {
+    if ($(this).is(':checked')) {
+      checksCategories[$(this).attr('data-name')] = $(this).attr('data-id');
+    } else {
+      delete checksCategories[$(this).attr('data-name')];
+    }
+    const namesh4 = Object.keys(checksStates);
+    $('.h4_categories').text(namesh4.sort().join(', '));
   });
 }

@@ -41,7 +41,7 @@ button:hover {
     font-weight: 400;
     font-size: 14px;
 }
-.locations {
+.categories {
     height: 100%;
     width: 25%;
     border-right: 1px solid #DDDDDD;
@@ -78,7 +78,7 @@ button:hover {
     margin: 0px;
 }
 
-.locations .popover {
+.categories .popover {
     margin-top: 0%;
 }
 .popover ul {
@@ -98,6 +98,6 @@ button:hover {
 }
 
 .amenities:hover .popover,
-.locations:hover .popover {
+.categories:hover .popover {
     visibility: visible;
 }
