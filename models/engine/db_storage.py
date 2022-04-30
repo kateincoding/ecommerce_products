@@ -33,6 +33,7 @@ class DBStorage:
         host = getenv('DB_HOST')
         db = getenv('DB_DATABASE')
         sql = 'mysql+mysqldb://{}:{}@{}/{}'.format(user, pssw, host, db)
+        print(sql)
         self.__engine = create_engine(sql, pool_pre_ping=True)
 
     def all(self, cls=None):

@@ -36,3 +36,32 @@ def get_product_bycategory(category_id):
         if str(product.to_dict()["category"]) == str(category_id):
             list_products.append(product.to_dict())
     return jsonify(list_products)
+
+
+# @app_views.route('/products_search', methods=['POST'], strict_slashes=False)
+def get_product_search():
+    """Retrieve a specific product depending of a class"""
+    if request.get_json() is None:
+        abort(400, description="Not a JSON")
+
+    data = request.get_json()
+    if data and len(data):
+        categories = data.get('categories', None)
+
+    if not data or not len(data) or (not categories):
+        products = storage.all(Product).values()
+        list_products = []
+        for product in products:
+            list_products.append(product.to_dict())
+        return jsonify(list_products)
+
+    list_products = []
+    if categories:
+        if not list_products:
+            list_products = storage.all(Product).values()
+        categories_obj = [storage.get(Category, cid) for cid in categories]
+        list_products = []
+    for product in all_products:
+        if str(product.to_dict()["category"]) == str(category_id):
+            list_products.append(product.to_dict())
+    return jsonify(list_products)
