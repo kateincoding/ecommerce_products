@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css?">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css?">
+    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css?">
+    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css?">
+    <link type="text/css" rel="stylesheet" href="../static/styles/8-products.css?">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   	<script src="../static/scripts/mvp.js"></script>
     <meta charset="UTF-8">
@@ -20,13 +25,17 @@
           <div class="popover">
             <ul>
                 {% for category in categories %}
-                <li><input type="checkbox">{{ category.name }}</li>
+                <li><input {{ category.name }}</li>
                 {% endfor %}
             </ul>
         </div>
-    </div>
-    <div class="placesh1"><h1>Productos</h1></div>
+      </div>
+    </section>
+    <div class="productsh1"><h1>Productos</h1></div>
       <section class="products">
       </section>
     </div>
+    <footer>
+      <p> created by katherine soto </p>
+    </footer>
   </body>

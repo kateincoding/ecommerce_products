@@ -4,6 +4,7 @@ const checksCategories = {};
 
 function main () {
   /* readCategories(); */
+  console.log("estoy aqui")
   dataUsers();
   /* $(':button').click(function () {
       dataUsers();
