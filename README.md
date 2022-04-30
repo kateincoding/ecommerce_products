@@ -1,6 +1,10 @@
 # ecommerce
 eCommerce of a minimarket
 
+# DEPLOY
+IaaS Oracle Ubuntu Nginx
+domain: test.katein.tech 
+
 # API INVENTORY
 
 First, I make a duplication of de data in a localrepostiry
