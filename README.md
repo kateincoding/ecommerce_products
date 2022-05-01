@@ -17,7 +17,7 @@ Listado de endpoints:
 0|[http://test.katein.tech/api/v1/stats](http://test.katein.tech/api/v1/stats)|Stats of how many products and categories exists
 0|[http://test.katein.tech/api/v1/products](http://test.katein.tech/api/v1/products)|List of products
 0|[http://test.katein.tech/api/v1/products/<product_id=5>](http://test.katein.tech/api/v1/products/5)|Retrieves 1 product
-0|[http://test.katein.tech/api/v1/products/category/<category_id=5>](http://test.katein.tech/api/v1/5)|List of products by one category selected, in this case is an example of the category_id=5
+0|[http://test.katein.tech/api/v1/products/category/<category_id=5>](http://test.katein.tech/api/v1/products/category/5)|List of products by one category selected, in this case is an example of the category_id=5
 
 # SET ENV
 
