@@ -9,12 +9,14 @@ domain:
 
 # SET ENV
 
+```
 sudo apt update
 sudo apt install mysql-server
 sudo systemctl start mysql.service
 sudo apt-get install libmysqlclient-dev
 sudo pip3 install mysqlclient
 pip3 install -r requeriments.txt
+```
 
 # API INVENTORY
 
@@ -25,6 +27,16 @@ Fase 0: crear una copia local del mysql en tu local
 
 ```
 cat setup_mysql_dev.sql | mysql -hlocalhost -uroot -p
+```
+Set the enviroment variables
+```
+Porfavor, customize los valores de acuerdo a los valores que tendra en su mysql
+```
+DB_USER=xxx
+DB_PASSWORD=xxxx
+DB_HOST=localhost
+DB_DATABASE=xxxx
+```
 cat bsale_test.sql | mysql -hlocalhost -ubsale_test -pbsale_test bsale_test
 ```
 
