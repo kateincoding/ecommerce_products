@@ -2,8 +2,19 @@
 eCommerce of a minimarket
 
 # DEPLOY
-IaaS Oracle Ubuntu Nginx
-domain: test.katein.tech 
+IaaS Oracle
+Ubuntu Nginx gunicorn
+domain:
+![http://test.katein.tech/mvp/](http://test.katein.tech/mvp/)
+
+# SET ENV
+
+sudo apt update
+sudo apt install mysql-server
+sudo systemctl start mysql.service
+sudo apt-get install libmysqlclient-dev
+sudo pip3 install mysqlclient
+pip3 install -r requeriments.txt
 
 # API INVENTORY
 
