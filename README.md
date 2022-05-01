@@ -29,13 +29,15 @@ Fase 0: crear una copia local del mysql en tu local
 cat setup_mysql_dev.sql | mysql -hlocalhost -uroot -p
 ```
 Set the enviroment variables
-```
+
 Porfavor, customize los valores de acuerdo a los valores que tendra en su mysql
 ```
-DB_USER=xxx
-DB_PASSWORD=xxxx
-DB_HOST=localhost
-DB_DATABASE=xxxx
+export DB_USER=xxx
+export DB_PASSWORD=xxxx
+export DB_HOST=localhost
+export DB_DATABASE=xxxx
+```
+Agregar datos a la base de datos:
 ```
 cat bsale_test.sql | mysql -hlocalhost -ubsale_test -pbsale_test bsale_test
 ```
