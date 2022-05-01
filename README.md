@@ -5,7 +5,7 @@ eCommerce of a minimarket
 IaaS Oracle
 Ubuntu Nginx gunicorn
 domain:
-![http://test.katein.tech/mvp/](http://test.katein.tech/mvp/)
+[http://test.katein.tech/mvp/](http://test.katein.tech/mvp/)
 
 # SET ENV
 
