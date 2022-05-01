@@ -31,7 +31,7 @@ sudo pip3 install mysqlclient
 pip3 install -r requeriments.txt
 ```
 
-# API INVENTORY
+# API INVENTORY: python, sqlalchemy, flask
 
 First, I make a duplication of de data in a localrepostiry
 chargue the script to "mysql"
@@ -64,6 +64,9 @@ Terminal 1:
 ```
 
 Fase2: Web_dynamic
+
+# FRONTEND: JS vainilla unido a Flask
+
 * How to run:
 ```
 python3 -m web_dynamic.product_filters
