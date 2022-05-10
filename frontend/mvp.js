@@ -36,7 +36,7 @@ function dataUsers () {
 }
 
 function readCategories () {
-  $('.categories .popover INPUT[type="checkbox"]').change(function () {
+  $('.category_box').change(function () {
     console.log("estoy aqui")
     if ($(this).is(':checked')) {
       console.log("i am here")
