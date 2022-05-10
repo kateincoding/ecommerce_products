@@ -1,5 +1,5 @@
 $(document).ready(main);
-const HOST = '0.0.0.0';
+const HOST = 'test.katein.tech';
 const checksCategories = {};
 let categoryId = "0";
 
@@ -18,7 +18,7 @@ function main () {
 }
 
 function dataUsers () {
-  const url = `http://${HOST}:5001/api/v1/products/category/${categoryId}`;
+  const url = `http://${HOST}/api/v1/products/category/${categoryId}`;
   $.get(url, function (data) {
     $('.products').empty();
     for (const product of data) {
@@ -51,7 +51,7 @@ function readCategories () {
 }
 
 function loadCategories () {
-  const url = `http://${HOST}:5001/api/v1/categories`;
+  const url = `http://${HOST}/api/v1/categories`;
   console.log("fin categorias");
   $.get(url, function (data) {
     for (const category of data) {
