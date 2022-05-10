@@ -4,18 +4,22 @@ const checksCategories = {};
 let categoryId = "0";
 
 function main () {
+  loadCategories();
+  console.log("entro a categorias");
   readCategories();
+  console.log("salgo de cat");
   dataUsers();
   $(':button').click(function () {
+      console.log("olioli");
+      console.log(checksCategories);
+      readCategories();
       dataUsers();
   });
 }
 
 function dataUsers () {
   const url = `http://${HOST}:5001/api/v1/products/category/${categoryId}`;
-  console.log("fin");
   $.get(url, function (data) {
-    console.log("hola mundo");
     $('.products').empty();
     for (const product of data) {
       $('section.products').append(`<article>
@@ -33,8 +37,9 @@ function dataUsers () {
 
 function readCategories () {
   $('.categories .popover INPUT[type="checkbox"]').change(function () {
+    console.log("estoy aqui")
     if ($(this).is(':checked')) {
-      console.log("heheheheheh")
+      console.log("i am here")
       checksCategories[$(this).attr('data-name')] = $(this).attr('data-id');
       categoryId = $(this).attr('data-id');
     } else {
@@ -42,5 +47,17 @@ function readCategories () {
     }
     const namesh4 = Object.keys(checksCategories);
     $('.h4_categories').text(namesh4.sort().join(', '));
+  });
+}
+
+function loadCategories () {
+  const url = `http://${HOST}:5001/api/v1/categories`;
+  console.log("fin categorias");
+  $.get(url, function (data) {
+    for (const category of data) {
+      $('section.categoriesfilters').append(`
+        <li><input type="checkbox" style="margin-right: 10px" data-id="${category.id}" data-name="${category.name}" class="category_box">${category.name}</li>
+      `);
+    }
   });
 }
