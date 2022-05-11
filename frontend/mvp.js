@@ -24,7 +24,7 @@ function allData () {
         <div class="price_by_night">$${product.price}</div>
       </div>
       <div class="information">
-        <img src="${product.url}" alt="${product.name}" width="100" height="70" >
+        <img src="${product.url_image}" alt="${product.name}" width="200" height="140" >
       </div>
       </article>`);
     }
@@ -42,9 +42,15 @@ function dataUsers () {
         <div class="price_by_night">$${product.price}</div>
       </div>
       <div class="information">
-        <img src=${product.url} alt="${product.name}" width="100" height="70" >
+        <img src="${product.url_image}" alt="${product.name}" width="200" height="140">
       </div>
-      </article>`);
+    </article>`);
+    // console.log(product.url_image);
+    // console.log("aqui aqui");
+    // var imageurl = document.getElementById(product.url_image).value
+    // var img = document.createElement('img')
+    // img.src = imageurl
+    // $('.information').appendChild(img)
     }
   });
 }
