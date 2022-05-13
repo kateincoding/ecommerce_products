@@ -16,9 +16,10 @@ Listado de endpoints:
 ---|---|---
 0|[http://test.katein.tech/api/v1/status](http://test.katein.tech/api/v1/status)|Status OK if the api is working
 1|[http://test.katein.tech/api/v1/stats](http://test.katein.tech/api/v1/stats)|Stats of how many products and categories exists
-2|[http://test.katein.tech/api/v1/products](http://test.katein.tech/api/v1/products)|List of products
-3|[http://test.katein.tech/api/v1/products/<product_id=5>](http://test.katein.tech/api/v1/products/5)|Retrieves 1 product
-4|[http://test.katein.tech/api/v1/products/category/<category_id=5>](http://test.katein.tech/api/v1/products/category/5)|List of products by one category selected, in this case is an example of the category_id=5
+2|[http://test.katein.tech/api/v1/categories](http://test.katein.tech/api/v1/categories)|List of categories
+3|[http://test.katein.tech/api/v1/products](http://test.katein.tech/api/v1/products)|List of products
+4|[http://test.katein.tech/api/v1/products/<product_id=5>](http://test.katein.tech/api/v1/products/5)|Retrieves 1 product
+5|[http://test.katein.tech/api/v1/products/category/<category_id=5>](http://test.katein.tech/api/v1/products/category/5)|List of products by one category selected, in this case is an example of the category_id=5
 
 # SET ENV
 
