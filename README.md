@@ -5,7 +5,7 @@ eCommerce of a minimarket
 IaaS Oracle
 Ubuntu Nginx gunicorn
 domain:
-* [http://test.katein.tech/mvp/](http://test.katein.tech/mvp/)
+* [http://test.katein.tech/bsale_test/](http://test.katein.tech/bsale_test/)
 
 apis:
 * [http://test.katein.tech/api/v1/status](http://test.katein.tech/api/v1/status)
